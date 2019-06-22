@@ -1,8 +1,14 @@
 {
   "version": 2,
+  "routes": [
+    { "src": "/", "dest": "/public/index.html" },
+    { "src": "/css/styles.css", "dest": "/public/css/styles.css" },
+    { "src": "/scripts/main.js", "dest": "/public/scripts/main.js" },
+    { "src": "/(.*)", "dest": "/server/index.js" }
+  ],
   "builds": [
-    { "src": "server/index.js", "use": "@now/node-server" }
-    
+    { "src": "server/index.js", "use": "@now/node-server" },
+    { "src": "public/**", "use": "@now/static" }
   ]
 }
 
