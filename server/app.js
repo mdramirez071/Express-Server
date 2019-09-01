@@ -4,9 +4,6 @@ const morgan = require('morgan');
 const data = require('./data');
 //console.log(data); //this console.log verifies that the data.json file is being grabbed properly.
 
-//the line below declares the exact PORT Number that we want to use for our environment.
-//const PORT = process.env.PORT || 3030;
-
 // create your express server below
 const app = express();
 
